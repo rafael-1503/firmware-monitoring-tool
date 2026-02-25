@@ -1,0 +1,49 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: fm-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend
+    image: firmware-monitoring/backend:1.4
+    container_name: fm-backend
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    env_file:
+      - ./.env
+    environment:
+      - mongoUri=mongodb://root:example@mongo:27017/firmware-monitoring?authSource=admin
+      - scriptsBaseUrl=http://scripts:5000/run/
+    ports:
+      - "3030:3030"
+
+  frontend:
+    build: ./frontend
+    image: firmware-monitoring/frontend:1.4
+    container_name: fm-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "443:443"
+
+  scripts:
+    build: ./scripts
+    image: firmware-monitoring/scripts:1.4
+    container_name: fm-scripts
+    restart: unless-stopped
+    environment:
+      - backendUrl=http://backend:3030
+      - sitePasswd=${sitePasswd}
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:

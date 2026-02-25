@@ -1,0 +1,11 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Jeden Tag um 2 Uhr:
+0 2 * * * root /app/jobs/scanNetwork >> /var/log/cron.log 2>&1
+
+# Jeden Tag um 3 Uhr:
+0 3 * * * root /app/jobs/checkFirmware >> /var/log/cron.log 2>&1
+
+# Jeden Tag um 4 Uhr:
+0 4 * * * root /app/jobs/checkCiscoVulnerabilities >> /var/log/cron.log 2>&1

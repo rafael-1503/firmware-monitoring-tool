@@ -1,0 +1,164 @@
+.AddDevice {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.AddDevice__Header {
+  width: 100%;
+  text-align: center;
+}
+
+.AddDevice__Header__Title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(7, 80, 51);
+  font-family: "Bechtle Pro", sans-serif;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  align-self: flex-start;
+}
+
+.AddDevice__Body__Section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AddDevice__Body__Section__Title {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(7, 80, 51);
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  align-self: flex-start;
+}
+
+/* Für die ganze Tabelle */
+.AddDevice__Body__Section__Content table {
+  width: 90%;
+  max-width: 1600px;
+  min-width: 800px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Bechtle Pro", sans-serif;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.AddDevice__Body__Section__Content table:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Kopfzeile */
+.AddDevice__Body__Section__Content table thead {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  text-align: left;
+}
+
+.AddDevice__Body__Section__Content table th {
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Tabellenzeilen */
+.AddDevice__Body__Section__Content table td {
+  padding: 0.9rem 1.2rem;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+/* Abwechselnde Hintergrundfarben */
+.AddDevice__Body__Section__Content table tbody tr:nth-child(even) {
+  background-color: #f9fbfa;
+}
+
+/* Hover-Effekt für Zeilen */
+.AddDevice__Body__Section__Content table tbody tr:hover {
+  background-color: #eef5f2;
+  transition: background-color 0.2s ease;
+}
+
+/* Verschönerungen */
+.AddDevice__Body__Section__Content table td:first-child {
+  font-weight: 600;
+  color: rgb(7, 80, 51);
+}
+
+.AddDevice__Button {
+  font-family: "Bechtle Pro", sans-serif;
+  font-size: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: rgb(7, 80, 51);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-left: 1rem;
+}
+
+.AddDevice__Button:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.AddDevice__Button--save {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  border-color: rgb(7, 80, 51);
+}
+
+.AddDevice__Button--save:hover:not(:disabled) {
+  background-color: #0a5938;
+}
+
+
+.AddDevice__Body__Section__Content input[type="text"],
+.AddDevice__Body__Section__Content textarea,
+.AddDevice__Body__Section__Content select {
+  width: 80%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-family: "Bechtle Pro", sans-serif;
+  font-size: 0.95rem;
+  color: #111827;
+  
+}
+
+.AddDevice__Body__Section__Content input[type="text"]:focus,
+.AddDevice__Body__Section__Content textarea:focus,
+.AddDevice__Body__Section__Content select:focus {
+  outline: none;
+  border-color: rgb(7, 80, 51);
+  box-shadow: 0 0 0 2px rgba(7, 80, 51, 0.15);
+}
+
+.AddDevice__Body__Section__Content textarea {
+  resize: vertical;
+}
+
+.AddDevice__Inputs__Save{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    margin-right: 1rem;
+}

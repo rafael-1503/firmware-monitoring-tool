@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "axios": "^1.13.1",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "ipaddr.js": "^2.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

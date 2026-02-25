@@ -1,0 +1,97 @@
+.LoginScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9fafb; /* leichtes Grau wie andere Seiten */
+  color: #222;
+  font-family: "Bechtle Pro", sans-serif;
+}
+
+.LoginScreen__Header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.LoginScreen__Header h1 {
+  font-size: 32px;
+  color: rgb(34, 79, 53); /* Bechtle-Grün */
+  margin: 0;
+}
+
+.LoginScreen__Body {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  min-width: 360px;
+  text-align: center;
+}
+
+.LoginScreen__Body table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.LoginScreen__Body td {
+  padding: 10px 8px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.LoginScreen__Body input[type="password"] {
+  width: 220px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.LoginScreen__Body input[type="password"]:focus {
+  border-color: rgb(34, 79, 53);
+}
+
+.LoginScreen__Button {
+  background-color: rgb(34, 79, 53); /* Bechtle-Grün */
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.LoginScreen__Button:hover {
+  background-color: rgb(27, 65, 43); /* dunkleres Grün beim Hover */
+}
+
+.LoginScreen__Button:active {
+  transform: scale(0.98);
+}
+
+.LoginScreen__Body p {
+  margin-top: 20px;
+  color: #c62828; /* Rot für Fehlermeldung */
+  font-weight: 500;
+  background-color: rgba(198, 40, 40, 0.08);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .LoginScreen__Body {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .LoginScreen__Body input[type="password"] {
+    width: 100%;
+  }
+}

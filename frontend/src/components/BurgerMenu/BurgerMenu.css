@@ -1,0 +1,75 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: rgba(35, 169, 106);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 3rem 1rem;
+    z-index: 1000;
+}
+
+.menu.open {
+    transform: translateX(0);
+}
+
+.menu ul {
+    list-style: none;
+    padding:0;
+    margin: 50px 0 0 0;
+}
+
+.menu li {
+    margin: 1.8rem 0;
+}
+
+.Button{
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    cursor: pointer;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Bechtle Pro", sans-serif;
+}
+
+.Button:hover{
+    transform: scale(1.05);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.burger-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    transition: transform 0.3s ease;
+}
+
+.burger-button.shifted {
+    transform: translateX(200px);
+}
+
+
+@media (max-width: 768px) {
+    .burger-button{
+        transform: scale(0.8);
+        top: 25px;
+    }
+
+    .burger-button.shifted{
+        transform: translateX(200px) scale(0.8);
+    }
+
+    .Button{
+        font-size: 24px;
+    }
+
+    .menu li{
+        margin: 1.2rem 0;
+    }
+}

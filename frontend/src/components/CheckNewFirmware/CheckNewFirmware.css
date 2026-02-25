@@ -1,0 +1,197 @@
+.CheckNewFirmware {
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.CheckNewFirmware__Header h1{
+    font-size: 2rem;
+    color: rgb(7, 80, 51);
+    font-weight: 700;
+}
+
+.CheckNewFirmware__Body {
+    margin-top: 3rem;
+}
+
+.CheckNewFirmware__Body__Section__Title {
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(7, 80, 51);
+    font-family: "Bechtle Pro", sans-serif;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    align-self: flex-start;
+}
+
+.CheckNewFirmware__Body__Section__Content {
+    margin-bottom: 4rem;
+}
+
+/* Für die ganze Tabelle */
+.CheckNewFirmware__Body__Section__Content table {
+    min-width: 1200px;
+    width: 98%;
+    max-width: 1600px;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: "Bechtle Pro", sans-serif;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.CheckNewFirmware__Body__Section__Content table:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Tabellenzeilen */
+.CheckNewFirmware__Body__Section__Content table td {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
+
+/* Abwechselnde Hintergrundfarben */
+.CheckNewFirmware__Body__Section__Content table tbody tr:nth-child(even) {
+    background-color: #f9fbfa;
+}
+
+/* Hover-Effekt für Zeilen */
+.CheckNewFirmware__Body__Section__Content table tbody tr:hover {
+    background-color: #eef5f2;
+    transition: background-color 0.2s ease;
+}
+
+/* Verschönerungen */
+.CheckNewFirmware__Body__Section__Content table td:first-child {
+    font-weight: 600;
+    color: rgb(7, 80, 51);
+}
+
+/*VON HIER*/
+
+/* Hauptüberschriften */
+.CheckNewFirmware__Body__Section__Content table thead tr:first-child th {
+    background-color: #0a5938; /* etwas dunkleres Grün */
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid #ffffff40;
+}
+
+/* Untere Header-Zeile (die einzelnen Spalten) */
+.CheckNewFirmware__Body__Section__Content table thead tr:last-child th {
+    background-color: rgb(7, 80, 51);
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid #ffffff30;
+}
+
+/*BIS HIER*/
+
+.CheckNewFirmware__Body__Section__Content table__Vuln{
+    width: 10px;
+}
+
+.CheckNewFirmware__Table__Vuln__Critical{
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #b00000 !important;
+    font-weight: 600;
+}
+
+.CheckNewFirmware__Table__Vuln__High{
+    background-color: rgba(255, 80, 80, 0.15);
+    font-weight: 600;
+}
+
+.CheckNewFirmware__Table__Vuln__Medium{
+    background-color: rgba(255, 165, 0, 0.2);;
+    font-weight: 600;
+}
+
+.CheckNewFirmware__Table__Vuln__Low{
+    background-color: rgba(255, 255, 120, 0.3);
+    font-weight: 600;
+}
+
+.CheckNewFirmware__Table__Vuln__-{
+    background-color: rgba(120, 230, 150, 0.25);
+    font-weight: 600;
+}
+
+.CheckNewFirmware__Body__Section__Content select,
+.CheckNewFirmware__Body__Section__Content input {
+    width: 40%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.CheckNewFirmware__Button {
+  font-family: "Bechtle Pro", sans-serif;
+  font-size: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: rgb(7, 80, 51);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-left: 1rem;
+}
+
+.CheckNewFirmware__Button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.CheckNewFirmware__Button:active {
+  transform: scale(0.98);
+}
+
+
+.CheckNewFirmware__FirmwareInputs tr:hover {
+    background: transparent !important; 
+} 
+
+.CheckNewFirmware .CheckNewFirmware__FirmwareInputs {
+    max-width: 600px !important;
+}
+
+.CheckNewFirmware .CheckNewFirmware__FirmwareInputs {
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.CheckNewFirmware .CheckNewFirmware__FirmwareInputs select,
+.CheckNewFirmware .CheckNewFirmware__FirmwareInputs input {
+    min-width: 220px;
+}
+
+
+.CheckNewFirmware__middle {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.CheckNewFirmware__Body__Section__Content__VulnTitle{
+  font-weight: 600;
+}
+

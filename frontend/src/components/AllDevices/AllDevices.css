@@ -1,0 +1,206 @@
+.AllDevices {
+  margin-top: 30px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.AllDevices__Title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(7, 80, 51);
+  font-family: "Bechtle Pro", sans-serif;
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  align-self: flex-start;
+}
+
+/* Für die ganze Tabelle */
+.AllDevices__Table {
+  table-layout: fixed;
+  width: 98%;
+  max-width: 1600px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Bechtle Pro", sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.AllDevices__Table col{
+  width: calc(100% / 9);
+}
+
+.AllDevices__Table col.col-vulns{
+  width: 15%;
+}
+
+.AllDevices__Table col.col-highestSev,
+.AllDevices__Table col.col-highestCvss{
+  width: 9%;
+}
+
+
+.AllDevices__Table:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Kopfzeile */
+.AllDevices__Table thead {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  text-align: left;
+}
+
+.AllDevices__Table th {
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Tabellenzeilen */
+.AllDevices__Table td {
+  padding: 0.9rem 1.2rem;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+/* Abwechselnde Hintergrundfarben */
+.AllDevices__Table tbody tr:nth-child(even) {
+  background-color: #f9fbfa;
+}
+
+/* Hover-Effekt für Zeilen */
+.AllDevices__Table tbody tr:hover {
+  background-color: #eef5f2;
+  transition: background-color 0.2s ease;
+}
+
+/* Leerer Zustand */
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* IP dick und grün */
+.AllDevices__Table td:first-child {
+  font-weight: 600;
+  color: rgb(7, 80, 51);
+}
+
+/* Hauptüberschriften */
+.AllDevices__Table thead tr:first-child th {
+  background-color: #0a5938;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #ffffff40;
+}
+
+/* Untere Header-Zeile (die einzelnen Spalten) */
+.AllDevices__Table thead tr:last-child th {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid #ffffff30;
+}
+
+
+.AllDevices__Table thead tr:first-child th:not(:last-child) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/*Farblich markieren*/
+.AllDevices__Table__Vuln__Critical{
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #b00000 !important;
+  font-weight: 600;
+}
+
+.AllDevices__Table__Vuln__High{
+  background-color: rgba(255, 80, 80, 0.15);
+  font-weight: 600;
+}
+
+.AllDevices__Table__Vuln__Medium{
+  background-color: rgba(255, 165, 0, 0.2);;
+  font-weight: 600;
+}
+
+.AllDevices__Table__Vuln__Low{
+  background-color: rgba(255, 255, 120, 0.3);
+  font-weight: 600;
+}
+
+.AllDevices__Table__Vuln__-{
+  background-color: rgba(120, 230, 150, 0.25);
+  font-weight: 600;
+}
+
+.AllDevices__Table__Click{
+  cursor: pointer;
+}
+
+.AllDevices__Button {
+  font-family: "Bechtle Pro", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: rgb(7, 80, 51);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-right: 40px;
+}
+
+.AllDevices__Button:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.AllDevices__Button:active {
+  transform: scale(0.98);
+}
+
+.AllDevices__Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin-bottom: 20px;
+}
+
+.AllDevices__Table__HeaderWithIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.AllDevices__Table__HeaderWithIcon__Icon {
+  flex: 0 0 auto;
+}
+
+.AllDevices__Table__HeaderWithIcon__Text {
+  display: inline-block;
+  line-height: 1.2;
+}

@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Bechtle Pro";
+  src: url("/src/assets/fonts/BechtlePro.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bechtle Pro";
+  src: url("/src/assets/fonts/BechtlePro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: #f8fcfa;
+}
+
+.App{
+  display: flex;
+  min-height:100vh;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Bechtle Pro", sans-serif;
+}
+
+.Content{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5em;
+  margin-top: 100px;
+}
+
+.User__Button{
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  html, body{
+    background-color: white;
+  }
+
+  .User__Button{
+    transform: scale(0.8);
+        top: 23px;
+  }
+}

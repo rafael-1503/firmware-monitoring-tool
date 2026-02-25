@@ -1,0 +1,270 @@
+.DeviceDetail {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.DeviceDetail__Header {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+
+.DeviceDetail__Header h1 {
+  position: absolute;
+  left: 43%;
+}
+
+.DeviceDetail__Header__Actions {
+  position: absolute;
+  right: 5%;
+  margin-top: 1.5rem;
+}
+
+.DeviceDetail__Body__Section{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.DeviceDetail__Body__Section__Title {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(7, 80, 51);
+  margin-bottom: 1.5rem;
+  margin-left: 1.5rem;
+  align-self: flex-start;
+}
+
+/* Für die ganze Tabelle */
+.DeviceDetail__Body__Section__Content table {
+  width: 98%;
+  max-width: 1600px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Bechtle Pro", sans-serif;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.DeviceDetail__Body__Section__Content table:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Kopfzeile */
+.DeviceDetail__Body__Section__Content table thead {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  text-align: left;
+}
+
+.DeviceDetail__Body__Section__Content table th {
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Tabellenzeilen */
+.DeviceDetail__Body__Section__Content table td {
+  padding: 0.9rem 1.2rem;
+  font-size: 0.95rem;
+  color: #333;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+/* Abwechselnde Hintergrundfarben */
+.DeviceDetail__Body__Section__Content table tbody tr:nth-child(even) {
+  background-color: #f9fbfa;
+}
+
+/* Hover-Effekt für Zeilen */
+.DeviceDetail__Body__Section__Content table tbody tr:hover {
+  background-color: #eef5f2;
+  transition: background-color 0.2s ease;
+}
+
+/* Leerer Zustand */
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 1rem;
+  font-style: italic;
+}
+
+/* Verschönerungen */
+.DeviceDetail__Body__Section__Content table td:first-child {
+  font-weight: 600;
+  color: rgb(7, 80, 51);
+}
+
+/*VON HIER*/
+
+/* Hauptüberschriften */
+.DeviceDetail__Body__Section__Content table thead tr:first-child th {
+  background-color: #0a5938; /* etwas dunkleres Grün */
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #ffffff40;
+}
+
+/* Untere Header-Zeile (die einzelnen Spalten) */
+.DeviceDetail__Body__Section__Content table thead tr:last-child th {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid #ffffff30;
+}
+
+
+.DeviceDetail__Body__Section__Content table thead tr:first-child th:not(:last-child) {
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/*BIS HIER*/
+
+.DeviceDetail__Body__Section__Content table__Vuln{
+  width: 10px;
+}
+
+.DeviceDetail__Table__Vuln__Critical{
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #b00000 !important;
+  font-weight: 600;
+}
+
+.DeviceDetail__Table__Vuln__High{
+  background-color: rgba(255, 80, 80, 0.15);
+  font-weight: 600;
+}
+
+.DeviceDetail__Table__Vuln__Medium{
+  background-color: rgba(255, 165, 0, 0.2);;
+  font-weight: 600;
+}
+
+.DeviceDetail__Table__Vuln__Low{
+  background-color: rgba(255, 255, 120, 0.3);
+  font-weight: 600;
+}
+
+.DeviceDetail__Table__Vuln__-{
+  background-color: rgba(120, 230, 150, 0.25);
+  font-weight: 600;
+}
+
+
+td:first-child{
+    width: 200px
+}
+
+.DeviceDetail__middle{
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.DeviceDetail__Body__Section__Content__VulnTitle{
+  font-weight: 600;
+}
+
+.DeviceDetail__Button {
+  font-family: "Bechtle Pro", sans-serif;
+  font-size: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: rgb(7, 80, 51);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-left: 1rem;
+}
+
+.DeviceDetail__Buttons{
+  display: flex;
+}
+
+.DeviceDetail__Button:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.DeviceDetail__Button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.DeviceDetail__Button--edit {
+  border-color: rgb(7, 80, 51);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.DeviceDetail__Button--save {
+  background-color: rgb(7, 80, 51);
+  color: #fff;
+  border-color: rgb(7, 80, 51);
+}
+
+.DeviceDetail__Button--save:hover:not(:disabled) {
+  background-color: #0a5938;
+}
+
+.DeviceDetail__Button--cancel {
+  border-color: #d1d5db;
+  color: #555;
+  background-color: #f9fafb;
+}
+
+.DeviceDetail__Button--cancel:hover:not(:disabled) {
+  background-color: #eef2f7;
+}
+
+.DeviceDetail__Body__Section__Content__Form input[type="text"],
+.DeviceDetail__Body__Section__Content__Form textarea {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-family: "Bechtle Pro", sans-serif;
+  font-size: 0.95rem;
+  color: #111827;
+  
+}
+
+.DeviceDetail__Body__Section__Content__Form input[type="text"]:focus,
+.DeviceDetail__Body__Section__Content__Form textarea:focus {
+  outline: none;
+  border-color: rgb(7, 80, 51);
+  box-shadow: 0 0 0 2px rgba(7, 80, 51, 0.15);
+}
+
+.DeviceDetail__Body__Section__Content__Form textarea {
+  resize: vertical;
+}
+
+.DeviceDetail__Error {
+  margin-top: 0.8rem;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  font-family: "Bechtle Pro", sans-serif;
+}

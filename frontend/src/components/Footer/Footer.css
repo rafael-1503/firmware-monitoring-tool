@@ -1,0 +1,29 @@
+.Footer{
+  /* position: fixed; */
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(7, 80, 51);
+  width: 100%;
+  min-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Bechtle Pro", sans-serif;
+  margin-top: 50px;
+}
+
+.Info{
+    color: white;
+    margin-right: 40px;
+    min-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ApiDocs{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}

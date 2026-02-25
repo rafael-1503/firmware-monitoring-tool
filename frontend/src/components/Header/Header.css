@@ -1,0 +1,29 @@
+.Header{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(7, 80, 51);
+  width: 100%;
+  min-height: 100px;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Bechtle Pro", sans-serif;
+}
+
+.Header__Logo{
+  position: absolute;;
+  right: 20px;
+  top: 15px;
+  height: 70px;
+  width: auto;
+  cursor: pointer;
+}
+
+.Title{
+color: white;
+text-decoration: none;
+cursor: pointer;
+}
